@@ -11,9 +11,10 @@ const createBoard = () => {
     for (var i = 0; i < width; i++) {
         matrix[i] = [];
         for (var j = 0; j < height; j++) {
-            matrix[i][j] = getRandomArbitrary(1, 1000);
+            matrix[i][j] = parseInt(getRandomArbitrary(1, 10));
         }
     }
+    console.dir(matrix);
     return matrix;
 }
 
@@ -24,8 +25,8 @@ const riddleSolver = (board) => {
     // only result i found to log the initial board
     console.log("Given board:");
     var board2 = [];
-    var height = board.length;
-    var width = board[0].length;
+    var height = board[0].length;
+    var width = board.length;
     for (var i = 0; i < width; i++) {
         board2[i] = [];
         for (var j = 0; j < height; j++) {
@@ -38,8 +39,7 @@ const riddleSolver = (board) => {
     while(iterate) {
         var count = 0;
         for(var i=0; i<board.length; i++) {
-            for(var j=0; j<board.length; j++) {
-                console.log(board[i][j]);
+            for(var j=0; j<board[0].length; j++) {
                 if(board[i][j]!=0) {
                     if (i+2 < board.length) {
                         if (board[i][j] == board[i+1][j] && board[i][j] == board[i+2][j]) {
@@ -108,7 +108,7 @@ const riddleSolver = (board) => {
     console.dir(board);
     return board;
 };
-
+/*
 const board = [
     [7, 7, 7, 5, 1, 7],
     [1, 8, 1, 1, 1, 4],
@@ -117,6 +117,9 @@ const board = [
     [1, 9, 3, 1, 8, 7],
     [5, 9, 2, 2, 4, 8]
 ];
+*/
+
+const boardCreated = createBoard();
 
 // usage of functions written above
-riddleSolver(board);
+riddleSolver(boardCreated);
