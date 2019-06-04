@@ -1,11 +1,9 @@
-/* Navbar container */
 .top {
     overflow: hidden;
     background-color: #2E37B9;
     font-family: Arial;
 }
 
-/* Links inside the navbar */
 .top a {
     float: left;
     font-size: 16px;
@@ -15,13 +13,11 @@
     text-decoration: none;
 }
 
-/* The dropdown container */
 .list {
     float: left;
     overflow: hidden;
 }
 
-/* Dropdown button */
 .list .dropbtn {
     font-size: 16px;
     border: none;
@@ -30,18 +26,13 @@
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
-    /* Important for vertical align on mobile phones */
-    margin: 0;
-    /* Important for vertical align on mobile phones */
 }
 
-/* Add a red background color to navbar links on hover */
 .top a:hover,
 .list:hover .dropbtn {
     background-color: #62D6F9;
 }
 
-/* Dropdown content (hidden by default) */
 .items {
     display: none;
     position: absolute;
@@ -51,7 +42,6 @@
     z-index: 1;
 }
 
-/* Links inside the dropdown */
 .items a {
     float: none;
     color: black;
@@ -65,12 +55,10 @@
     float: right;
 }
 
-/* Add a grey background color to dropdown links on hover */
 .items a:hover {
     background-color: #62D6F9;
 }
 
-/* Show the dropdown menu on hover */
 .list:hover .items {
     display: block;
 }
